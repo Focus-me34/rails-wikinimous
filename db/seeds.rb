@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 20.times do
-  article = Article.new(title: Faker::Restaurant.name, content: Faker::Restaurant.description)
+  article = Article.new(title: Faker::Restaurant.name, content: Faker::Restaurant.description, address: Faker::Address.full_address )
   article.save
 end

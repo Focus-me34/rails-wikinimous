@@ -1,0 +1,9 @@
+<%= link_to("Home", articles_path)%>
+<%= link_to("New article", new_article_path)%>
+
+<h1>Find a restaurant</h1>
+
+<% @articles.each do |article| %>
+  <%= link_to(article.title, article_path(article)) %> <br>
+  <%= article.address%><br>
+<% end %>
